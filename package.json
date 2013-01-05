@@ -4,6 +4,7 @@
   "description" : "Helper for Cakefile",
   "keywords" : ["build", "cake"],
   "author" : "dsimard <dsimard@azanka.ca> (http://github.com/dsimard)",
+  "main": "./index.coffee",
   "repository" : {
     "type" : "git",
     "url" : "https://dsimard@github.com/dsimard/bakerhelper.git"

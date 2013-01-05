@@ -1,0 +1,7 @@
+tests/*
+vendor/*
+Cakefile
+*.md
+*.log
+.npmignore
+.travis.yml
