@@ -1,0 +1,22 @@
+{ 
+  "name" : "bakerhelper",
+  "version" : "0.0.1",
+  "description" : "Helper for Cakefile",
+  "keywords" : ["build", "cake"],
+  "author" : "dsimard <dsimard@azanka.ca> (http://github.com/dsimard)",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://dsimard@github.com/dsimard/bakerhelper.git"
+  },
+  "licenses": "MIT",
+  "dependencies" : {
+    "coffee-script" : "latest",
+    "underscore" : "latest",
+    "colors" : "~0.6.0"
+  },
+  "devDependencies" : {
+    "mocha" : "latest",
+    "should" : "latest"
+  },
+  "engines" : {"node" : ">=0.4.0"}
+}
