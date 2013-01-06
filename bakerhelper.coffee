@@ -13,7 +13,11 @@ r =
   #
   # Overrides `child_process.r.exec` to log to console and exit if there's an error
   #
+  #     bakerhelper.exec 'rm *.js', {cwd:'./lib'}, (err, stdout, stderr)->
+  #
   # `options` : See (`child_process`)[http://nodejs.org/api/child_process.html#child_process_child_process_r.exec_command_options_callback] documentation
+  #
+  # The callback is passed three arguments (`err`, `stdout`, `stderr`)
   exec : (cmd, options, callback=null)->
     [callback, options] = [options, {}] if not callback?
     log "#{'Executing'.bold.green} `#{cmd}`"
@@ -27,7 +31,10 @@ r =
 
   # ## compileCoffeescripts(directory, option={})
   #
-  # Compile all the coffeescripts into javascript files from a directory
+  # Compile all the coffeescripts into javascript files from a directory (not recursive)
+  #
+  #     bakerhelper.compileCoffeescripts './lib/'
+  #     bakerhelper.compileCoffeescripts './bin/', {shebang:true}
   #
   # `options.shebang` : If it should add a shebang at the top of the file
   compileCoffeescripts: (directory, options={})->
@@ -59,6 +66,8 @@ r =
   #
   # Generate doc with [docco-husky](https://github.com/mbrevoort/docco-husky)
   # and push it to the `gh-pages` branch.
+  #
+  #     bakerhelper.compileCoffeescripts ['./lib/', './bin']
   generateDoccoHusky: (directories)->
     directories = (_.flatten([directories])).join ' '
     directory = path.resolve './'
