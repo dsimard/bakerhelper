@@ -9,7 +9,7 @@ _ = require './node_modules/underscore'
 colors = require './node_modules/colors'
 
 r = 
-  # ## r.exec(cmd, options, callback)
+  # ### exec(cmd, options, callback)
   #
   # Overrides `child_process.r.exec` to log to console and exit if there's an error
   #
@@ -29,7 +29,7 @@ r =
       log stdout.grey if stdout? && stdout != ''
       callback?(err, stdout, stderr)
 
-  # ## compileCoffeescripts(directory, option={})
+  # ### compileCoffeescripts(directory, option={})
   #
   # Compile all the coffeescripts into javascript files from a directory (not recursive)
   #
@@ -62,7 +62,7 @@ r =
             fs.writeFile filename, js, 'utf8', (err)->
               error err and process.exit 1 if err?
 
-  # ## generateDoccoHusky(directories=[])
+  # ### generateDoccoHusky(directories=[])
   #
   # Generate doc with [docco-husky](https://github.com/mbrevoort/docco-husky)
   # and push it to the `gh-pages` branch.
