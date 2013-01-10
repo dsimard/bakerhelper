@@ -1,6 +1,6 @@
 { 
   "name" : "bakerhelper",
-  "version" : "0.0.1",
+  "version" : "0.0.2",
   "description" : "Helper for Cakefile",
   "keywords" : ["build", "cake"],
   "author" : "dsimard <dsimard@azanka.ca> (http://github.com/dsimard)",
@@ -13,8 +13,7 @@
   "dependencies" : {
     "coffee-script" : "~1.4.0",
     "underscore" : "~1.4.3",
-    "colors" : "~0.6.0",
-    "docco-husky" : "~0.3.3"
+    "colors" : "~0.6.0"
   },
   "devDependencies" : {
     "mocha" : "latest",

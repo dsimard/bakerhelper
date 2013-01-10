@@ -88,7 +88,7 @@ r =
           log stdout
           
           # Create doc       
-          r.exec "./node_modules/.bin/docco-husky #{directories}", (err, stdout, stderr)->
+          r.exec "docco-husky #{directories}", (err, stdout, stderr)->
             error err if err?
             log stdout
             
